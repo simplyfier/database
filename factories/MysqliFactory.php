@@ -1,6 +1,6 @@
 <?php
 /**
- * StupidlySimple Framework - A PHP Framework For Lazy Developers
+ * StupidlySimple Framework - A PHP Framework For Lazy Developers.
  *
  * Copyright (c) 2017 Fariz Luqman
  *
@@ -22,17 +22,17 @@
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
- * @package     StupidlySimple
  * @author      Fariz Luqman <fariz.fnb@gmail.com>
  * @copyright   2017 Fariz Luqman
  * @license     MIT
+ *
  * @link        https://stupidlysimple.github.io/
  */
+
 namespace Simplyfier\Database\Factories;
 
 /**
- * Class MysqliFactory
- * @package Simplyfier\Database\Factories
+ * Class MysqliFactory.
  *
  * @since 0.5.0
  */
@@ -52,8 +52,10 @@ class MysqliFactory
     }
 
     /**
-     * Create an instance of \mysqli
+     * Create an instance of \mysqli.
+     *
      * @return \mysqli
+     *
      * @since 0.5.0
      */
     public static function createInstance()
@@ -63,10 +65,11 @@ class MysqliFactory
 
         // Error handling
         if (mysqli_connect_error()) {
-            trigger_error("Failed to conencto to MySQL: " . mysql_connect_error(),
+            trigger_error('Failed to conencto to MySQL: '.mysql_connect_error(),
                 E_USER_ERROR);
         }
         self::$instance = $instance;
+
         return self::$instance;
     }
 }
