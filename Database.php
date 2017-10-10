@@ -1,6 +1,6 @@
 <?php
 /**
- * StupidlySimple Framework - A PHP Framework For Lazy Developers
+ * StupidlySimple Framework - A PHP Framework For Lazy Developers.
  *
  * Copyright (c) 2017 Fariz Luqman
  *
@@ -22,19 +22,20 @@
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
- * @package     StupidlySimple
  * @author      Fariz Luqman <fariz.fnb@gmail.com>
  * @copyright   2017 Fariz Luqman
  * @license     MIT
+ *
  * @link        https://stupidlysimple.github.io/
  */
+
 namespace Simplyfier;
 
 use Simplyfier\Database\Factories\IlluminateDatabaseFactory as Factory;
 
 /**
  *  The Database manager from various providers
- * -----------------------------------------------------------------------
+ * -----------------------------------------------------------------------.
  *
  * The Cache Facade configures the Cache Manager and provides access to the
  * Cache Manager instance
@@ -43,10 +44,10 @@ use Simplyfier\Database\Factories\IlluminateDatabaseFactory as Factory;
  */
 class Database
 {
-    static private $config = null;
+    private static $config = null;
 
     /**
-     * Load configuration file
+     * Load configuration file.
      *
      * @since 0.5.0
      */
@@ -66,9 +67,10 @@ class Database
     {
         if (self::$config['enabled'] === true) {
             Factory::setSettings(self::$config['settings']);
+
             return Factory::createInstance();
         } else {
-            return null;
+            return;
         }
     }
 
@@ -80,6 +82,7 @@ class Database
     public static function connect()
     {
         self::loadConfig();
+
         return self::getInstance();
     }
 }
