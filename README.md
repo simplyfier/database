@@ -1,3 +1,5 @@
+[![PHP version](https://badge.fury.io/ph/simplyfier%2Fdatabase.svg)](https://badge.fury.io/ph/simplyfier%2Fdatabase)
+
 ![StyleCI](https://styleci.io/repos/106058457/shield?branch=master)
 ![ScrutinizerCI](https://scrutinizer-ci.com/g/simplyfier/database/badges/quality-score.png?b=master)
 [![composer.lock](https://poser.pugx.org/stupidlysimple/php/composerlock)](https://packagist.org/packages/simplyfier/database)
